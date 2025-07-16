@@ -1,0 +1,210 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!-- Promo Carousel -->
+<div id="promoCarousel" class="carousel slide mb-4 shadow-sm" data-bs-ride="carousel">
+    <div class="carousel-inner rounded-3">
+        <div class="carousel-item active">
+            <img src="https://images.unsplash.com/photo-1513708927688-890a1e2b6b33?auto=format&fit=crop&w=1200&q=80" class="d-block w-100" alt="Sale Banner">
+        </div>
+        <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80" class="d-block w-100" alt="New Arrivals">
+        </div>
+        <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1200&q=80" class="d-block w-100" alt="Free Shipping">
+        </div>
+        <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=1200&q=80" class="d-block w-100" alt="Flash Deals">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#promoCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#promoCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<!-- Categories -->
+<div class="mb-5 text-center">
+    <h2 class="mb-3">Shop by Category</h2>
+    <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="#" class="btn btn-outline-primary px-4 py-2 rounded-pill">Electronics</a>
+        <a href="#" class="btn btn-outline-primary px-4 py-2 rounded-pill">Fashion</a>
+        <a href="#" class="btn btn-outline-primary px-4 py-2 rounded-pill">Home & Living</a>
+        <a href="#" class="btn btn-outline-primary px-4 py-2 rounded-pill">Beauty</a>
+        <a href="#" class="btn btn-outline-primary px-4 py-2 rounded-pill">Sports</a>
+    </div>
+</div>
+
+<!-- Sort By Dropdown -->
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2 class="mb-0">Featured Products</h2>
+    <div>
+        <label for="sortBy" class="form-label me-2 mb-0">Sort By:</label>
+        <select id="sortBy" class="form-select d-inline-block w-auto">
+            <option selected>Best Match</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+            <option>Newest</option>
+        </select>
+    </div>
+</div>
+
+<!-- Product Grid -->
+<div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+    <div class="col">
+        <div class="card h-100 position-relative product-card" data-product-name="Wireless Headphones" data-product-price="$29.99" data-product-image="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80" data-product-description="High-quality sound, noise-cancelling." data-product-rating="4" data-product-reviews="120">
+            <span class="badge bg-danger position-absolute top-0 start-0 m-2">Sale</span>
+            <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Wireless Headphones">
+            <div class="card-body text-center">
+                <h5 class="card-title">Wireless Headphones <a href="#" class="text-danger ms-2"><i class="far fa-heart"></i></a></h5>
+                <div class="mb-2">
+                    <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                    <span class="text-muted small">(120)</span>
+                </div>
+                <p class="card-text">High-quality sound, noise-cancelling.</p>
+                <div class="mb-2 fw-bold">$29.99 <span class="text-muted text-decoration-line-through small">$39.99</span></div>
+                <div class="d-flex justify-content-center gap-2">
+                    <a href="#" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#quickViewModal">Quick View</a>
+                    <a href="/Product/Details/1" class="btn btn-primary btn-sm">View Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100 position-relative product-card" data-product-name="Smart Watch" data-product-price="$49.99" data-product-image="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" data-product-description="Track your fitness and notifications." data-product-rating="5" data-product-reviews="89">
+            <span class="badge bg-success position-absolute top-0 start-0 m-2">New</span>
+            <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Smart Watch">
+            <div class="card-body text-center">
+                <h5 class="card-title">Smart Watch <a href="#" class="text-danger ms-2"><i class="far fa-heart"></i></a></h5>
+                <div class="mb-2">
+                    <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    <span class="text-muted small">(89)</span>
+                </div>
+                <p class="card-text">Track your fitness and notifications.</p>
+                <div class="mb-2 fw-bold">$49.99</div>
+                <div class="d-flex justify-content-center gap-2">
+                    <a href="#" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#quickViewModal">Quick View</a>
+                    <a href="/Product/Details/2" class="btn btn-primary btn-sm">View Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100 position-relative product-card" data-product-name="Running Shoes" data-product-price="$19.99" data-product-image="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80" data-product-description="Comfortable and lightweight for daily runs." data-product-rating="3" data-product-reviews="45">
+            <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Running Shoes">
+            <div class="card-body text-center">
+                <h5 class="card-title">Running Shoes <a href="#" class="text-danger ms-2"><i class="far fa-heart"></i></a></h5>
+                <div class="mb-2">
+                    <span class="text-warning">&#9733;&#9733;&#9733;&#9734;&#9734;</span>
+                    <span class="text-muted small">(45)</span>
+                </div>
+                <p class="card-text">Comfortable and lightweight for daily runs.</p>
+                <div class="mb-2 fw-bold">$19.99</div>
+                <div class="d-flex justify-content-center gap-2">
+                    <a href="#" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#quickViewModal">Quick View</a>
+                    <a href="/Product/Details/3" class="btn btn-primary btn-sm">View Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100 position-relative product-card" data-product-name="Bluetooth Speaker" data-product-price="$34.99" data-product-image="https://images.unsplash.com/photo-1518445697755-0b1c1e2b7a2b?auto=format&fit=crop&w=400&q=80" data-product-description="Portable, waterproof, and powerful sound." data-product-rating="5" data-product-reviews="67">
+            <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-2">Hot</span>
+            <img src="https://images.unsplash.com/photo-1518445697755-0b1c1e2b7a2b?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Bluetooth Speaker">
+            <div class="card-body text-center">
+                <h5 class="card-title">Bluetooth Speaker <a href="#" class="text-danger ms-2"><i class="far fa-heart"></i></a></h5>
+                <div class="mb-2">
+                    <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    <span class="text-muted small">(67)</span>
+                </div>
+                <p class="card-text">Portable, waterproof, and powerful sound.</p>
+                <div class="mb-2 fw-bold">$34.99</div>
+                <div class="d-flex justify-content-center gap-2">
+                    <a href="#" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#quickViewModal">Quick View</a>
+                    <a href="/Product/Details/4" class="btn btn-primary btn-sm">View Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100 position-relative product-card" data-product-name="Leather Wallet" data-product-price="$24.99" data-product-image="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80" data-product-description="Premium leather, slim design." data-product-rating="4" data-product-reviews="32">
+            <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Leather Wallet">
+            <div class="card-body text-center">
+                <h5 class="card-title">Leather Wallet <a href="#" class="text-danger ms-2"><i class="far fa-heart"></i></a></h5>
+                <div class="mb-2">
+                    <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                    <span class="text-muted small">(32)</span>
+                </div>
+                <p class="card-text">Premium leather, slim design.</p>
+                <div class="mb-2 fw-bold">$24.99</div>
+                <div class="d-flex justify-content-center gap-2">
+                    <a href="#" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#quickViewModal">Quick View</a>
+                    <a href="/Product/Details/5" class="btn btn-primary btn-sm">View Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100 position-relative product-card" data-product-name="Sunglasses" data-product-price="$14.99" data-product-image="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80" data-product-description="UV protection, stylish design." data-product-rating="5" data-product-reviews="150">
+            <span class="badge bg-info text-dark position-absolute top-0 start-0 m-2">Best Seller</span>
+            <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Sunglasses">
+            <div class="card-body text-center">
+                <h5 class="card-title">Sunglasses <a href="#" class="text-danger ms-2"><i class="far fa-heart"></i></a></h5>
+                <div class="mb-2">
+                    <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    <span class="text-muted small">(150)</span>
+                </div>
+                <p class="card-text">UV protection, stylish design.</p>
+                <div class="mb-2 fw-bold">$14.99</div>
+                <div class="d-flex justify-content-center gap-2">
+                    <a href="#" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#quickViewModal">Quick View</a>
+                    <a href="/Product/Details/6" class="btn btn-primary btn-sm">View Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Load More Button -->
+<div class="text-center mb-5">
+    <button class="btn btn-outline-primary px-5 py-2">Load More</button>
+</div>
+
+<!-- Newsletter Signup -->
+<div class="bg-white rounded-3 shadow-sm p-4 mb-5 text-center">
+    <h4 class="mb-3">Get the Latest Deals!</h4>
+    <form class="row g-2 justify-content-center">
+        <div class="col-auto">
+            <input type="email" class="form-control" placeholder="Enter your email" required>
+        </div>
+        <div class="col-auto">
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+        </div>
+    </form>
+</div>
+
+<!-- Quick View Modal (functional) -->
+<div class="modal fade" id="quickViewModal" tabindex="-1" aria-labelledby="quickViewModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="quickViewModalLabel">Quick View</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img class="quickview-img mb-3" src="" alt="" style="max-width: 100%; height: 200px; object-fit: cover; border-radius: 1rem;">
+        <div class="quickview-rating mb-2"></div>
+        <div class="quickview-price fw-bold mb-2"></div>
+        <div class="quickview-desc mb-3"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

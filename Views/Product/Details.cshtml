@@ -1,0 +1,26 @@
+@model MyWebApp.Controllers.ProductController.Product
+@{
+    ViewData["Title"] = Model.Name;
+}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg">
+                <img src="@Model.ImageUrl" class="card-img-top" alt="@Model.Name">
+                <div class="card-body">
+                    <h2 class="card-title mb-3">@Model.Name</h2>
+                    <div class="mb-2">
+                        <span class="text-warning">
+                            @for (int i = 0; i < Model.Rating; i++) { <text>&#9733;</text> }
+                            @for (int i = Model.Rating; i < 5; i++) { <text>&#9734;</text> }
+                        </span>
+                        <span class="text-muted small">(@Model.Reviews reviews)</span>
+                    </div>
+                    <h4 class="fw-bold mb-3">$@Model.Price</h4>
+                    <p class="card-text mb-4">@Model.Description</p>
+                    <a href="/" class="btn btn-outline-secondary">&larr; Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
