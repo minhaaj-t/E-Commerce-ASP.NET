@@ -7,7 +7,7 @@ A modern, responsive E-commerce web application built with ASP.NET Core MVC. Fea
 ## ✨ Features
 
 - Modern, mobile-friendly E-commerce design
-- Product catalog with images, badges, ratings, and categories
+- Product catalog with images, badges, ratings, and categories  
 - Quick View modal for instant product previews
 - Dedicated product details pages
 - Promotional carousel and newsletter signup
@@ -69,4 +69,5 @@ Deploy the contents of the `publish` folder to your preferred host (Azure, IIS, 
 
 ## 📄 License
 MIT (or your preferred license)
+
 
